@@ -1,0 +1,29 @@
+
+<html>
+    <head>
+   
+        <title>Login Page</title>
+        <link rel="Stylesheet" href="/styles/login-style.css">
+    </head>
+    <body >
+      <img src="./assets/images/bg.png"/>
+        <div class="loginbox">
+            <img src="./assets/images/page-icon.png" class="avatar">
+            <h1> Login Here</h1>
+            <form (ngSubmit)="onSubmit()">
+                <p> Email </p>
+                <input type="text"  name="uname" placeholder="Enter email" [(ngModel)]="email">
+                <p> Password </p>
+                <input type="password" name="password" placeholder="Enter password" [(ngModel)]="password" >
+                <button type="submit" class="btn btn-success">Login</button>
+                <br>
+                <a href="/registerUser">No Account?Students Resgiter Here! </a><br>
+                <a href="/registerMentor">No Account?Mentors Resgiter Here!</a>
+            </form>
+       </div>
+       <div [hidden]="!submitted">
+          <h4>You submitted successfully!</h4>
+          <button class="btn btn-success">Login</button>
+        </div>
+    </body>
+</html>
